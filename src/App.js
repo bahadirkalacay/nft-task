@@ -4,13 +4,13 @@ import Header from "./components/Header/Header";
 import ScrollButtons from "./components/ScroolButtons/ScrollButtons";
 
 function App() {
-  // window.addEventListener(
-  //   "contextmenu",
-  //   function (e) {
-  //     e.preventDefault();
-  //   },
-  //   false
-  // );
+  window.addEventListener(
+    "contextmenu",
+    function (e) {
+      e.preventDefault();
+    },
+    false
+  );
 
   return (
     <div>

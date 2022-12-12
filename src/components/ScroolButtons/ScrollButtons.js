@@ -1,42 +1,31 @@
 import { FaArrowCircleUp, FaArrowCircleDown } from "react-icons/fa";
-import { useState } from "react";
 import "./style.css"
 
 const ScrollButtons = () => {
-  const [showButton, setShowButton] = useState("button-up none");
-  const [showButtonTwo, setShowButtonTwo] = useState("button-down");
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
-    ) {
-      setShowButton("button-up");
-    } else {
-      setShowButton("none");
-      setShowButtonTwo("button-down");
-    }
+  const downScroll = () => {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0, 
+      behavior: 'smooth',
+    });
   }
-  function topFunction() {
-    document.body.scrollTop -= 150;
-    document.documentElement.scrollTop -= 150;
+  const upScroll = () => {
+    window.scroll({
+      top: document.body.offsetTop,
+      left: 0, 
+      behavior: 'smooth',
+    });
   }
-  function bottomFunction() {
-    document.body.scrollTop += 150;
-    document.documentElement.scrollTop += 150;
-  }
+  
   return (
     <div>
-      <button onClick={topFunction} id="button-up" className={showButton}>
+      <button onClick={upScroll}  className="button-up">
         <FaArrowCircleUp />
       </button>
       <button
-        onClick={bottomFunction}
-        id="button-down"
-        className={showButtonTwo}
+        onClick={downScroll}
+        className="button-down"
       >
         <FaArrowCircleDown />
       </button>
