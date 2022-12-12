@@ -4,6 +4,7 @@ import "./style.css";
 
 const ScrollButtons = () => {
   const [visiable, setVisible] = useState(false);
+
   const downScroll = () => {
     window.scroll({
       top: document.body.offsetHeight,
@@ -11,18 +12,10 @@ const ScrollButtons = () => {
       behavior: "smooth",
     });
   };
-  
+
   function toggleVisible() {
     const scrolled = document.documentElement.scrollTop;
     if (scrolled > 200) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  }
-  function bottomVisible() {
-    const scrolledbottom = document.documentElement.scrollHeight;
-    if (scrolledbottom < 200) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -36,15 +29,7 @@ const ScrollButtons = () => {
     });
   }
 
-  function csrollBottom(){
-    window.scrollTo({
-      bottom: 0,
-      behavior: "smooth",
-    });
-  }
-
   window.addEventListener("scroll", toggleVisible);
-  window.addEventListener("scrollbottom", bottomVisible);
 
   return (
     <div>
