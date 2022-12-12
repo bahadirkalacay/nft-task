@@ -6,6 +6,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css";
 import { Navigation, EffectCoverflow, Pagination, Keyboard } from "swiper";
+import Tilt from "react-parallax-tilt";
 
 const NftComponent = () => {
   return (
@@ -39,7 +40,9 @@ const NftComponent = () => {
         <SwiperSlide className="nft-swiper-wrapper">
           <div className="nft-card nft-swiper-slide">
             <div className="nft-card-image">
-              <img src={data.image} alt="image" />
+              <Tilt>
+                <img src={data.image} alt="image"></img>
+              </Tilt>
             </div>
             <div className="nft-card-content">
               <span class="nft-card-title">{data.title}</span>

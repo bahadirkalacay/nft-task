@@ -3,14 +3,15 @@ import "./styles.css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "swiper/css"
-import { Navigation, EffectCoverflow, Pagination, Keyboard} from "swiper";
-import teamData from './../../../data/team';
+import "swiper/css";
+import { Navigation, EffectCoverflow, Pagination, Keyboard } from "swiper";
+import teamData from "./../../../data/team";
+import Tilt from "react-parallax-tilt";
 
 const TeamComponent = () => {
   return (
     <Swiper
-      modules={[Navigation, EffectCoverflow, Pagination,Keyboard]}
+      modules={[Navigation, EffectCoverflow, Pagination, Keyboard]}
       effect={"coverflow"}
       coverflowEffect={{
         rotate: 20,
@@ -21,7 +22,7 @@ const TeamComponent = () => {
       }}
       loop={true}
       keyboard={{
-        enabled:true
+        enabled: true,
       }}
       grabCursor={true}
       centeredSlides={true}
@@ -29,7 +30,7 @@ const TeamComponent = () => {
       pagination={true}
       navigation={{
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        prevEl: ".swiper-button-prev",
       }}
       onSlideChange={console.log("change")}
       onSwiper={(swiper) => console.log(swiper)}
@@ -39,7 +40,9 @@ const TeamComponent = () => {
         <SwiperSlide className="team-swiper-wrapper">
           <div className="team-card team-swiper-slide">
             <div className="team-card-image">
-              <img src={data.image} alt="image"/>
+              <Tilt>
+                <img src={data.image} alt="image" />
+              </Tilt>
             </div>
             <div className="team-card-content">
               <span class="team-card-title">{data.title}</span>
@@ -54,6 +57,6 @@ const TeamComponent = () => {
       <div class="swiper-button-prev"></div>
     </Swiper>
   );
-}
+};
 
-export default TeamComponent
+export default TeamComponent;

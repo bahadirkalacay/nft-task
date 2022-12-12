@@ -48,8 +48,8 @@
   background-color: #ffe1cc00;
 }
 .nft-card-image {
-  width: 10em;
-  height: 10em;
+  width: 10em !important;
+  height: 10em !important;
   border-radius: 50%;
   border: 3px solid;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -60,10 +60,10 @@
   padding: 3px;
   margin-bottom: 2em;
   img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 9.5em !important;
+    height: 9.5em !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
   }
 }
 .nft-card-content {
