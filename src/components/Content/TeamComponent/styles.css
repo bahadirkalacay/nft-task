@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+:root {
+  --font: "Montserrat";
+  --color: #001220;
+  --bg-color: #fcaf3c;
+}
+
+.team-swiper {
+  width: 100%;
+  padding-top: 12em;
+  padding-bottom: 2em;
+}
+
+.team-swiper-wrapper {
+  width: auto !important;
+  height: 35em;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 2em;
+}
+
+.team-card {
+  width: 20em !important;
+  height: 90% !important;
+  border-radius: 1em;
+  padding: 2em 1em;
+  background-color: rgba(255, 0, 221, 0.1568627451);
+  box-shadow: 0 0 0.5em #ea00ff;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 2em;
+  position: relative;
+  border-radius: 15px;
+  margin: 30px;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+}
+
+.team-swiper-slide:not(.swiper-slide-active) {
+  filter: brightness(80%) blur(0.5px);
+  -webkit-filter: brightness(80%) blur(0.5px);
+  background-color: rgba(255, 225, 204, 0);
+}
+
+.team-card-image {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 3px solid;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #ea00ff;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.5em #001220;
+  padding: 3px;
+  margin-bottom: 2em;
+}
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.team-card-title {
+  font-size: larger;
+  position: relative;
+  top: 0.2em;
+}
+
+.team-card-name {
+  color: black;
+  font-size: larger;
+}
+
+.team-card-text {
+  text-align: center;
+  margin: 2em 2em;
+}
+
+.team-card-btn {
+  background-color: var(--color);
+  color: white;
+  text-transform: uppercase;
+  font-size: medium;
+  font-family: "Montserrat";
+  border: 1px solid #ea00ff;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+.team-card-btn:hover {
+  color: #af8c73;
+}/*# sourceMappingURL=styles.css.map */

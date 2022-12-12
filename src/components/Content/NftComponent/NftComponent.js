@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./styles.scss";
+import "./styles.css";
 import nftData from "../../../data/nft";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
