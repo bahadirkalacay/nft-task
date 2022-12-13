@@ -39,11 +39,11 @@ const NftComponent = () => {
         <SwiperSlide className="nft-swiper-wrapper">
           <div className="nft-card nft-swiper-slide">
             <div className="nft-card-image  ">
-              <div className="rgb">
-                <Tilt>
+              <Tilt>
+                <div className="rgb">
                   <img src={data.image} alt="image" />
-                </Tilt>
-              </div>
+                </div>
+              </Tilt>
             </div>
             <div className="nft-card-content">
               <span class="nft-card-title">{data.title}</span>

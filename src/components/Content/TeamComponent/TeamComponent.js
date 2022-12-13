@@ -40,11 +40,11 @@ const TeamComponent = () => {
         <SwiperSlide className="team-swiper-wrapper">
           <div className="team-card team-swiper-slide">
             <div className="team-card-image">
-              <div className="rgb">
               <Tilt>
-                <img src={data.image} alt="image" />
+                <div className="rgb">
+                  <img src={data.image} alt="image" />
+                </div>
               </Tilt>
-              </div>
             </div>
             <div className="team-card-content">
               <span class="team-card-title">{data.title}</span>
