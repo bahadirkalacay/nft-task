@@ -11,6 +11,7 @@ const nftData = [
     btn: "buy NOW",
     image: Gold,
   },
+  //deneme
   {
     title: "ADVERTISEMENT",
     name: "for brands only",
